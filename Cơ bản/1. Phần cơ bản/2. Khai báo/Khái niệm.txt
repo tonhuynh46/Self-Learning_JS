@@ -1,0 +1,136 @@
+1. Các cách khai báo biến trong javascript
+Chúng ta có ba cách khai báo biến. Thứ nhất là dùng từ khóa var, thứ hai là dùng từ khóa const, và cuối cùng là từ khóa let. Tùy vào từng trường hợp mà chọn cách khai báo cho phù hợp.
+
+Lưu ý: Đối với các phiên bản trước ES6 thì chỉ có từ khóa var thôi nhé. Vì vậy, với những trình duyệt quá cũ thì không sử dụng được let và const.
+
+Để khai báo một biến ta sử dụng từ khóa var tenbien.
+
+var username;
+
+Khai báo biến trong JS bằng từ khóa let
+Sử dụng từ khóa let tenbien.
+
+let username;
+
+Biến loại này chỉ có phạm vi trong khối khai báo mà thôi. Vì vậy nó sẽ tối ưu trong trường hợp bạn cần khai báo một biến chỉ sử dụng tạm thời trong một phạm vi nhất định. Phạm vi nay ta hay gọi là block scope.
+
+Ví dụ: Biến không tồn tại do từ khóa let nằm ngoài phạm vi block sope mà biến đang nằm.
+
+Như trong ví dụ này thì biến domain chỉ có phạm vi trong lệnh if mà thôi.
+if (true){
+    let domain = "freetuts.net";
+}
+// Lỗi vì biến domain không tồn tại
+console.log(domain);
+
+Tuy nhiên, nếu bạn thay bằng từ khóa var thì được nhé.
+if (true){
+    var  domain = "freetuts.net";
+}
+// chạy bình thường
+console.log(domain);
+
+Khai báo biến trong JS bằng từ khóa const
+Sử dụng từ khóa const tenbien.
+
+const username = 'giá trị';
+
+Const là một hằng số, vì vậy khi khai báo biến const thì bạn phải gán giá trị cho nó luôn, sau này cũng không thể thay đổi giá trị cho biến.
+
+Ví dụ: Mình cố tình đổi giá trị cho biến domain nên sẽ bị báo lỗi.
+const domain = "freetuts.net";
+// Lỗi, vì biến const không được phép thay đổi giá trị
+domain = "danhgiawp.com";
+
+2. Cách đặt tên cho biến trong Javascript
+Khi đặt tên cho biến thì bạn phải tuân thủ theo những quy tắc dưới đây:
+
+Tên biến phải là các chữ không dấu viết hoa hoặc viết thường, các chữ số từ 0-9 và dấu gạch dưới (_).
+Tên biến bắt đầu phải là chữ hoặc dấu gạch dưới (_), nếu bắt đầu bằng số là sai
+Tên biến có thể đặt dài hay ngắn tùy vào lập trình viên.
+Ví dụ các cách khai báo biến
+// Đúng
+var username;
+ 
+// Đúng
+var _username;
+ 
+// Đúng
+var __username;
+ 
+// Đúng
+var username90;
+ 
+// SAI
+var 90thehalfheart;
+
+Ngoài cách khai báo từng biến đơn lẻ như trên thì bạn có thể gộp nó vào một dòng duy nhất như sau:
+
+Ví dụ khai báo nhiều biến
+
+var username, _username, __username, username90;
+
+3. Cách gán giá trị cho biến trong javascript
+Để gán giá trị cho biến ta dùng dấu bằng (=) để gán vế phải vào vế trái.
+
+Ví dụ. gán giá trị thehalfheart vào biến username thì ta viết là username = 'thehalfheart'.
+
+Có hai cách gán thông dụng đó là vừa khai báo biến vừa gán giá trị và khai báo rồi mới gán giá trị:
+
+Vừa khai báo vừa gán giá trị
+
+var username = 'thehalfheart';
+
+Khai báo xong mới gán giá trị
+
+var username;
+username = 'thehalfheart';
+
+4. Kiểu giá trị của biến trong Javascript
+Trong Javascript rất hạn chế về kiểu dữ liệu nhưng bù lại cơ chế xử lý kiểu dữ liệu của nó rất linh hoạt, giúp lập trình viên có thể chuyển đổi một cách dễ dàng. Đó là vì mọi kiểu dữ liệu đều có thể quy về đối tượng và mỗi đối tượng ta có thể bổ sung các phương thức xử lý riêng.
+
+Giống như php, để xác định biến có kiểu dữ liệu là gì thì ta dựa vào giá trị mà nó đang có. Có nghĩa khi bạn gán một con số không có dấu chấm động thì nó sẽ là kiểu INT, nếu gán một chuỗi thì là kiểu String.
+
+Gán kiểu giá trị cho biến
+// Biến website đag kiểu String
+var website = 'thehalfehart';
+ 
+// Biến website chuyển sang kiểu INT
+website = 12;
+ 
+// Biến website chuyển sang kiểu float
+website = 12.5;
+
+Trong Javascript sẽ có các kiểu dữ liệu thông dụng như kiểu chuỗi (String), số (Number), mảng (Array), đối tượng (Object). Chi tiết từng kiểu dữ liệu chúng ta sẽ được học trong các bài tiếp theo.
+
+5. In giá trị của biến JS ra trình duyệt
+Để in giá trị của biến hoặc một chuỗi nào đó ra trình duyệt thì ta sử dụng hàm document.write(value).
+
+6. Các phép toán thường dùng trên biến trong Javascript
+Khi bạn học Javascript thì minh nghĩ là bạn đã từng học một ngôn ngữ khác rồi, nên trong bài này mình sẽ nói đơn giản lại.
+
+Khi làm việc với biến thì chúng ta thường sử dụng các phép toán như:
+
+Gán giá trị.
+Cộng trừ nhân chia các số.
+Nối chuỗi.
+// Phép gán
+var domain = "freetuts.net";
+ 
+// Phép nối chuỗi
+var subdomain = "code." + domain; 
+ 
+// Phép cộng
+var number = 20 + 10;
+ 
+// Phép trừ
+var number = 20 - 10;
+ 
+// Phép nhân
+var number = 20 * 10;
+ 
+// Phép chia
+var number = 20 / 10;
+
+Chúng ta sẽ tìm hiểu kỹ hơn ở các bài tiếp theo.
+Lời kết: Như vậy qua bài này chắc bạn đã biết được ba cách khai báo biến trong Javascript rồi phải không nào? Tùy vào từng trường hợp mà bạn chọn từ khóa var - let - const cho phù hợp nhé. Chúc các bạn học tốt ngôn ngữ JS này.

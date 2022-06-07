@@ -1,0 +1,104 @@
+1. Javascript là gì?
+- Javascript là một ngôn ngữ lập trình kịch bản dựa vào đối tượng phát triển có sẵn hoặc tự định nghĩa. Javascript được sử dụng rộng rãi trong các ứng dụng Website. Javascript được hỗ trợ hầu như trên tất cả các trình duyệt như Firefox, Chrome, ... trên máy tính lẫn điện thoại.
+- Nhiệm vụ của Javascript là xử lý những đối tượng HTML trên trình duyệt. Nó có thể can thiệp với các hành động như thêm / xóa / sửa các thuộc tính CSS và các thẻ HTML một cách dễ dàng. Hay nói cách khác, Javascript là một ngôn ngữ lập trình trên trình duyệt ở phía client. Tuy nhiên, hiện nay với sự xuất hiện của NodeJS đã giúp cho Javascript có thể làm việc ở backend.
+- Bạn thử truy cập vào một số website trên internet thì sẽ thấy có những hiệu ứng slide, menu xổ xuống, các hình ảnh chạy qua chạy lại rất đẹp. tất cả các chức năng này đều được xử lý bằng Javascript đấy các bạn ạ.
+- Trong những năm gần đây, sự xuất hiện của các framework như NodeJS (chuyên code backend), ExpressJS (NodeJS framework), và nhiều thư viện frontend khác như Angular, jQuery, RactJS ra đời, giúp tạo ra một cơn sốt với từ khóa Javascript Fullstack.
+
+js là gì?
+JS là một từ viết tắt của JavaScript, vì vây khi một ai đó nhắc tới JS thì bạn phải hiểu rằng đó là Javascript nhé.
+
+2. Javascript Framework là gì?
+- Javascript Framework là một bộ thư viện được xây dựng dựa vào ngôn ngữ lập trình Javascript. Mỗi framework thường được tạo ra để phục vụ cho một lĩnh vực nào đó. Ví dụ với Angular và React thì chuyên xử lý frontend, NodeJS thì chuyên xử lý backend, jQuery là một thư viện rất mạnh khi xử lý DOM HTML và CSS.
+- Sức mạnh của Javascript là không thể chối cãi, bằng chứng là hiện nay có rất nhiều libraries và framework được viết bằng Javascript ra đời như:
+    + Angular: Một thư viện dùng để xây dựng ứng dụng Single Page.
+    + NodeJS: Một thư viện được phát triển phía Server dùng để xây dựng ứng dụng realtime.
+    + Sencha Touch: Một Framework dùng để xây dựng ứng dụng Mobile.
+    + ExtJS: Một Framework dùng xây dựng ứng dụng quản lý (Web Applications).
+    + jQuery: Một thư viện rất mạnh về hiểu ứng.
+    + ReactJS: Một thư viện viết ứng dụng mobie.
+    + Và còn nhiều thư viện khác.
+Còn rất rất nhiều nhưng mình chỉ liệt kê bấy nhieu thôi nhé
+3. Ưu điểm và nhược điểm của Javascript
+Tuy là một ngôn ngữ lập trình rất nổi tiếng, nhưng bản thân Javascript không thể hoàn hảo được. Sau đây hãy cùng freetuts điểm qua một số ưu điểm và nhược điểm của nó nhé.
+
+Ưu điểm của Javascript là gì?
+Javascript giúp thao tác với người dùng ở phía client và tách biệt giữa các client. Ví dụ 2 người đang truy cập vào 2 trình duyệt khác nhau thì cả hai đều có những phiên xử lý Javascript khác nhau, không ảnh hưởng lẫn nhau.
+Javascript có thể hoạt động trên nhiều nền tảng khác nhau, từ Windows, macOS cho đến các hệ điều hành trên mobile.
+Javascript là một ngôn ngữ dễ tiếp cận, bạn sẽ dễ dàng học nó mà không cần phải cài đặt quá nhiều phần mềm.
+Nhược điểm của Javascript là gì?
+Vì là một ngôn ngữ rất dễ dàng bị soi code nên dễ bị khai thác. Hacker có thể nhập một đoạn code bất kì vào khung console của trình duyệt, lúc này trình duyệt sẽ hiểu rằng đoạn code đó là chính thống, nên hacker có thể gửi nhửng request lên server một cách dễ dàng.
+
+Có thể bạn đã thấy những tool về Facebook trên mạng, hoặc những đoạn code làm thay đổi chức năng và giao diện của Facebook, chúng được viết từ Javascript đấy các bạn ạ.
+
+4. Cách viết chương trình javascript đầu tiên
+Bước đầu tiên để học Javascript là bạn phải chuẩn bị một phần mềm để viết mã Javascript, mình thì thích dùng Netbeans nhưng nếu bạn là người mới thì nên sử dụng Notepad++ vì nó rất nhẹ và dễ cài đặt.
+
+Qua khái niệm javascript là gì? thì bạn thấy tất cả các trình duyệt đều hỗ trợ nên ta không cần phải download thư viện gì cả mà thông qua những đoạn mã script giúp trình duyệt nhận diện được đó là Javascript.
+Cặp thẻ mở và thẻ đóng
+Tất cả những đoạn mã Javascript đều phải đặt trong cặp thẻ mở <script> và thẻ đóng </script>, ví dụ:
+
+Cặp thẻ script
+<script language="javascript">
+    alert("Hello World!");
+</script>
+Đặt thẻ script ở đâu?
+Chúng ta có ba cách đặt thường được sử dụng sau đây:
+
+Cách 1: Internal - viết trong file html hiện tại
+
+Thông thường chúng ta sẽ viết những đoạn mã javascript trên phần head, tuy nhiên đó không phải là điều kiện bắt buộc, nghĩa là bạn có thể đặt ở đâu tùy thích miễn là những đoạn mã đó phải được bao lại bằng thẻ script.
+
+Ví dụ đặt trong thẻ head
+<html>
+    <head>
+        <title></title>
+        <script language="javascript">
+            alert("Hello World!");
+        </script>
+    </head>
+    <body>
+         
+    </body>
+</html>
+Ví dụ đặt trong thẻ body
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script language="javascript">
+            alert("Hello World!");
+        </script>
+    </body>
+</html>
+Cách 2: External - viết ra một file js khác rồi import vào
+
+Bạn có thể viết những đoạn mã javascript ở một file có phần mở rộng là .js, sau đó dùng thẻ script để import vào (giống CSS vậy). Ví dụ file JS của mình có tên là demo.js thì lúc này mình import vào như sau:
+
+Code import JS
+1
+<script language="javascript" src="demo.js"></script>
+Lúc này bên trong file demo.js bạn không đặt thẻ scirpt nữa nhé vì nó là file có phần đuôi là .js rồi nên trình duyệt tự nhận diện đây là file chứa mã Javascript.
+
+Cách 3: Inline - viết trực tiếp trong thẻ HTML
+
+Inline nghĩa là bạn sẽ viết những đoạn mã Javascript trực tiếp trong thẻ HTML luôn. Như ví dụ dưới đây là mình đang viết dạng inline vì đoạn mã alert(1) được đặt trong sự kiện onclick của thẻ button.
+
+Code bên trong sự kiện click
+<input type="button" onclick="alert(1)" value="Click Me"/>
+5. Các câu hỏi thường gặp khi học Javascript
+Bây giờ mình sẽ tổng hợp một số câu hỏi thường gặp trong quá trình học Javascript nhé.
+
+Thẻ script là gì?
+Thẻ script dùng để khai báo cho trình duyệt biết nội dung bên trong sẽ là một đoạn mã Javascript.
+
+Type = text/javascript là gì?
+Khi bạn khai báo thẻ script thì sẽ có thuộc tính type="text/javascript". Đây là tham số dùng để khai báo media type cho dữ liệu nằm bên trong của thẻ script. Mặc định nếu bạn không khai báo thì nó sẽ hiểu là text/javascript.
+
+Javascript có làm được backend không?
+Theo lý thuyết thì Javascript là ngôn ngữ client nên không thể thao tác trên phía server. Tuy nhiên, khi server của bạn có cài đặt NodeJS thì ở server hoàn toàn có thể dùng ngôn ngữ Javascript để code, bởi NodeJS sử dụng Javascript.
+
+Có nên học Javascript không?
+Nếu bạn đi theo lĩnh vực lập trình web, app mobile thì nên học thêm Javascript đi nhé. Mình đảm bảo bạn sẽ luôn có việc làm và lương cũng không tồi. Đương nhiên không phải chỉ rành Javascript thôi, mà bạn phải học thêm những FW JS khác.
+
+Lời kết: Như vậy là mình đã giới thiệu xong khái niệm Javascript là gì, cũng như những vấn đề liên quan đến Javascript. Bạn phải nhớ rằng sức mạnh của Javascript trong những năm gần đây là rất khủng khiếp, nên học master javascript thì bạn sẽ luôn có chỗ đứng trong lĩnh vực lập trình này.

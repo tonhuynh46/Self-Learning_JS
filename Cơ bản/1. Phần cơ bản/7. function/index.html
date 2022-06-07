@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7. function</title>
+    <style>
+        body{
+            background-image: linear-gradient( 102.4deg,  rgba(253,189,85,1) 7.8%, rgba(249,131,255,1) 100.3% );
+
+        }
+    </style>
+</head>
+<body>
+    <script language="javascript">
+        // function check_number(number){
+        //     if(number % 2 == 0){
+        //         alert(number + ' là số chẵn');
+        //     }
+        //     else{
+        //         alert(number + ' là số lẻ');
+        //     }
+        // }
+
+        // // Sử dụng hàm kiểm tra cho 5 số
+        // check_number(1);
+        // check_number(2);
+        // check_number(3);
+        // check_number(4);
+        // check_number(5);
+
+        //==========================================================================================
+        //Hàm có return và hàm không có return
+        // function tinhTong(a, b){
+        //     // trả về kết quả là a + b
+        //     // return a + b;   //có return
+
+        //     document.write("có tổng là " + (a+b)); //không có return
+        // }
+
+        // //sử dụng
+        // var num1 = 4;
+        // var num2 = 5;
+
+        // var kq = tinhTong(num1, num2);
+        // //alert(kq); //không có return
+
+        //==========================================================================================
+        // function ShowMessage(message){
+        //     message = message || 'Không có thông báo <br/>'
+        //     document.write(message);
+        // }
+
+        // // Cách 1: không truyền tham số
+        // //ShowMessage();
+        
+        // // Cách 2: Truyền tham số
+        // ShowMessage('Wellcome to page');
+        
+
+        //kiểm tra năm nhuận
+        // function checkYear(y){
+        //     if(y % 100 == 0){
+        //         if(y % 400 == 0)
+        //             alert(y + ' Là năm nhuận');
+        //         else
+        //             alert(y + ' Không phải là năm nhuận');
+        //     }
+        //     else if(y % 4 == 0)
+        //         alert(y + ' Là năm nhuận');
+        //     else{
+        //         alert(y + ' Không phải là năm nhuận');
+        //     }
+        // }
+
+        // checkYear(2024)
+
+        //Kiểm tra năm nhuận nhưng dùng return
+        function checkYear(y){
+            if(y % 100 == 0){
+                if(y % 400 == 0)
+                    return true;
+                else
+                    return false;
+            }
+            else if(y % 4 == 0)
+                return true;
+            else{
+                return false;
+            }
+        }
+
+        var check = checkYear(2024);
+        if(check)
+            alert('Là năm nhuận')
+        else
+            alert('Không là năm nhuận');
+    </script>
+    
+</body>
+</html>

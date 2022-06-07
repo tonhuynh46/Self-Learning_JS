@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Switch case</title>
+
+</head>
+<body>
+    <script>
+        var number = parseInt(prompt("Nhập số cần kiểm tra"));
+        var mod = number % 2 ;
+        
+        switch(mod){
+            case 0: {
+                document.write(number + " Đây là số chẵn");
+                break;
+            }
+            case 1: {
+                document.write(number + " Đây là số lẻ");
+                break;
+            }
+            default: {
+                document.write(" Ký tự vừa nhập không phải số");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

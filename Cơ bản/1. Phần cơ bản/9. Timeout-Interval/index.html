@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. TimeOut-Interval</title>
+</head>
+<body>
+    <!-- <script language="javascript">
+        setTimeout(function(){
+            alert("Chào mừng bạn đến với freetuts.net");
+        }, 1000);
+
+        var do_alert = function(){
+            alert("Chào mừng bạn đến với freetuts.net");
+        };
+        setTimeout(do_alert, 2000);
+    </script> -->
+
+    <!-- <script language="javascript">
+        var do_alert = setTimeout(function(){
+            alert("Chào mừng bạn đến với freetuts.net");
+        }, 3000);
+     
+        function clearAlert()
+        {
+            clearTimeout(do_alert);
+        }
+    </script>
+     
+    <input type="button" onclick="clearAlert()" value="Clear" /> -->
+
+    <script>
+        var interval_obj = setInterval(function(){
+            alert("Chào mừng bạn đến với freetuts.net");
+            clearInterval(interval_obj);
+        }, 3000);
+    </script>
+</body>
+</html> 

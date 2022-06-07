@@ -1,0 +1,15 @@
+1. Hàm alert() trong javascript
+Hàm alert() có nhiệm vụ in một thông báo popup, nó có một tham số truyền vào và tham số này chính là nội dung ta muốn thông báo với người dùng.
+Ví dụ: Viết chương trình khi click vào button thì xuất hiện một thông báo.
+
+2. Hàm confirm() trong javascript
+Hàm confirm() cũng sẽ xuất hiện một thông báo popup nhưng nó có thêm hai sự lựa chọn là Yes và No, nếu người dùng chọn Yes thì nó trả về TRUE và ngược lại nếu chọn NO thì nó sẽ trả về FALSE. Nó cũng có một tham số truyền vào và tham số này chính là nội dung thông báo.
+Ví dụ: Viết chương trình hiển thị thông báo xác nhận và dùng hàm alert() để hiển thị kết quả người dùng chọn.
+
+Vì chúng ta chưa học hàm nên mình sẽ không viết dài dòng mà sẽ viết chạy trực tiếp khi load trang, nghĩa là khi trang web được chạy lên thì thông báo nó hiển thị luôn chứ không cần phải click vào button nhé.
+
+3. Hàm prompt() trong javascript
+Hàm prompt() dùng để lấy thông tin từ người dùng, gồm có hai tham số truyền vào là nội dung thông báo và giá trị ban đầu. Nếu người dùng không nhập vào thì giá trị nó sẽ trả về là NULL
+Ví dụ: Viết chương trìn lấy thông tin tên của người dùng
+
+Ta sẽ khai báo biến lưu trữ kết quả và kết hợp sử dụng hàm alert() để thông báo kết quả người dùng nhập vào.

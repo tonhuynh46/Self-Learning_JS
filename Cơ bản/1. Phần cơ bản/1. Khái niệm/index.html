@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Ví dụ phần cơ bản</title>
+</head>
+<body>
+    <input id="btn_clickme" type="button" value="Click me">
+
+    <script language="javascript">
+        // Lấy element có id=clickme lưu vào biến button
+        var button = document.getElementById('btn_clickme')
+
+        // Khi click vào element chứa trong button thì thực hiện một function, 
+        // bên trong function thông báo lên Hello World!
+        button.addEventListener('click',function(){
+            alert('Hello Word')
+        })
+    </script>
+</body>
+</html>

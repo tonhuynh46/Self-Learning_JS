@@ -1,0 +1,112 @@
+1. Lệnh switch case trong Javascript
+Lênh switch case có công dụng giống như lệnh if else đó là đều dùng để rẻ nhánh chương trình, ứng với mỗi nhánh sẽ có một điều kiện cụ thể và điều kiện đó phải sử dụng toán tử so sánh bằng, còn đối với lệnh if else thì bạn có thể truyền vào một mệnh đề bất kì và sử dụng nhiều toán tử khác nhau.
+Cú pháp
+switch (variable)
+{
+    case value_1 : {
+        // do some thing
+        break;
+    }
+    case value_2 : {
+        // do some thing
+        break;
+    }
+    default : {
+        // do something
+    }
+}
+
+Nếu như trong tất cả các case không có case nào phù hợp thì nó sẽ chạy lệnh ở default, ngược lại nếu có case nào phù hợp thì chương trình sẽ chạy trong case đó, đồng thời lệnh break sẽ giúp chương trình thoát khỏi lệnh switch, còn nếu bạn không thêm lệnh break thì chương trình sẽ tiếp tục kiểm tra và chạy tiếp ở case tiếp theo.
+
+Quy trình chạy như sau:
+Nếu tham số variable có giá trị là value_1 thì những đoạn code nằm bên trong case 1 sẽ được thực hiện, ngược lại nó sẽ nhảy xuống case tiếp theo.
+Lúc này nếu variable có giá trị là value_2 thì những đoạn code trong case 2 sẽ được thực hiện, ngược lại nó kiểm tra tiếp xem còn case nào không.
+Nhận thấy không còn case nào nữa nên nó sẽ kiểm tra có lệnh default không? Vì có lệnh default nên nó sẽ chạy đoạn code trong lệnh default đó rồi thoát khỏi switch case.
+Đề bài: Viết chương trình cho người dùng nhập vào một số, kiểm tra số đó là số chẵn hay số lẻ.
+Với bài toán này thì mình kết hợp lệnh prompt() để lấy thông tin từ người dùng, đồng thời kết hợp lệnh switch case để hiển thị kết quả. Có một lưu ý bạn nên sử dụng hàm parseInt() để chuyển dữ liệu người dùng nhập sang number.
+
+var number = parseInt(prompt("Nhập số cần kiểm tra"));
+ 
+var mod = (number % 2);
+ 
+switch (mod)
+{
+    case 0 : {
+        document.write(number + " là số chẵn");
+        break;
+    }
+    case 1: {
+        document.write(number + " là số lẽ");
+        break;
+    }
+    default : {
+        document.write("Ký tự bạn nhập không phải số");
+    }
+}
+
+2. Ví dụ lệnh switch case trong Javascript
+Đề bài: Viết chương trình cho người dùng nhập một màu, kiểm tra màu đó có phải màu đỏ (red) hay màu vàng (yellow) hay không? Nếu không phải thì thông báo cho người dùng biết nhập sai màu.
+
+Chúng ta sẽ giải bài này bằng nhiều cách khác nhau và mỗi cách bạn sẽ học được một kinh nghiệm xử lý lệnh switch case.
+
+Trường hợp không có default
+Trường hợp này nếu bạn nhập một màu khác với màu đỏ (red) và vàng (yellow) thì sẽ không có thông báo gì.
+
+Code
+var color = prompt("Nhập màu cần kiểm tra");
+ 
+switch (color){
+    case 'red' : 
+        document.write("Bạn nhập màu đỏ, đúng rồi đó");
+        break;
+    case 'yellow' : 
+        document.write("Bạn nhập màu vàng, đúng rồi đó");
+        break;    
+}
+
+Trường hợp không có break
+Trường hợp này nếu bạn nhập vào màu đỏ (red) thì chương trình sẽ in ra cả lệnh ở case màu vàng (yellow) phía dưới, lý do là trong case màu đỏ ta không sử dụng lệnh break để thoát khỏi lệnh switch nên nó sẽ chạy thẳng xuống case phía dưới luôn mà không cần kiểm tra điều kiện.
+var color = prompt("Nhập màu cần kiểm tra");
+ 
+switch (color){
+    case 'red' : 
+        document.write("Bạn nhập màu đỏ, đúng rồi đó");
+    case 'yellow' : 
+        document.write("Bạn nhập màu vàng, đúng rồi đó");
+        break;  
+    default :
+        document.write("Màu bạn nhập không có trong hệ thống");
+}
+
+Giả sử bạn thêm một case nữa cho màu xanh (blue), lúc nếu bạn nhập vào màu đỏ (red) thì kết quả chỉ in thêm lệnh màu vàng (yellow) thôi. Từ đó suy ra rằng nếu không có break thì nó chỉ chạy luôn case đầu tiên phía dưới nó.
+Code
+var color = prompt("Nhập màu cần kiểm tra");
+ 
+switch (color){
+    case 'red' : 
+        document.write("Bạn nhập màu đỏ, đúng rồi đó");
+    case 'yellow' : 
+        document.write("Bạn nhập màu vàng, đúng rồi đó");
+        break;  
+    case 'blue' : 
+        document.write("Bạn nhập màu xanh, đúng rồi đó");
+        break; 
+    default :
+        docment.write("Màu bạn nhập không có trong hệ thống");
+}
+
+Trường hợp gom nhóm case
+Nếu bạn để ý kỹ hơn thì thì thấy rằng nếu người dùng nhập vào màu đỏ (red), vàng (yellow) và xanh (blue) thì đều có thông báo nhập đúng. Vậy tai sao mình không gom ba trường hợp đó thành một thôi.
+
+Code
+var color = prompt("Nhập màu cần kiểm tra");
+ 
+switch (color){
+    case 'red' : 
+    case 'yellow' : 
+    case 'blue' : 
+        document.write("Bạn nhập màu " + color + ", đúng rồi đó");
+        break; 
+    default :
+        document.write("Màu bạn nhập không có trong hệ thống");
+}

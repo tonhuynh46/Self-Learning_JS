@@ -1,0 +1,127 @@
+1. Lệnh if trong javascript
+Nội dung thực hiện của lệnh if sẽ được bao quanh bởi cặp ngoặc nhọn đóng mở {}. Cú pháp chuẩn của lệnh if như sau:
+
+Cú pháp lênh if
+if (condition){
+    // statment
+}
+Trong đó condition là mệnh đề điều kiện và luôn luôn phải có một trong hai giá trị là true/false hoặc giá trị tương đương như:
+    NULL => False
+    Rỗng => False
+    Số khác 0 => TRUE
+    Số 0 => FALSE
+
+Ví dụ lệnh if
+var a = 12;
+var b = 12;
+ 
+if (a == b){
+    alert('a và b bằng nhau');
+}
+
+Kết quả sẽ có thông báo popup "a và b bằng nhau".
+
+Trường hợp nếu các câu lệnh bên trong là câu lệnh đơn ( chỉ có một lệnh) thì ta có thể bỏ cặp dấu ngoặc nhọn. Như với ví dụ trên thì ta sẽ viết lại như sau:
+
+var a = 12;
+var b = 12;
+ 
+if (a == b)
+    alert('a và b bằng nhau');
+
+2. Lệnh if else trong javascript
+Lệnh else sẽ được thực thi nếu lệnh if không được thực hiện, tức là điều kiện ở condition sẽ có giá trị là FALSE. Như vậy khi dùng lệnh else thì bắt buộc phải có một lệnh if đứng trước nó.
+
+Cú pháp lệnh if else như sau
+if (condition){
+    // Code cho lệnh if
+}
+else{
+    // Code cho lệnh else
+}
+Ví dụ
+var a = 12;
+var b = 10;
+ 
+if (a == b){
+    alert('a và b bằng nhau');
+}
+else{
+    alert('a và b khác nhau');
+}
+Trong ví dụ này thì chương trình sẽ chạy trong lệnh else vì điều kiện thực thi lệnh if không thỏa.
+
+Bạn hãy để ý nhé, điều kiện chạy lệnh if là (a == b), mà a = 12 và b = 10 nên biểu thức (12 == 10) sẽ có giá trị là FALSE.  
+
+3. Kết hợp nhiều lệnh if else trong javascript
+Ta có thể kết hợp nhiều câu lệnh if để xử lý bài toán, bằng cách thêm nhiều lệnh else if phía sau. Cú pháp của nó như sau:
+
+Cú pháp nhiều lệnh if
+if (condition1){
+    // Code cho lệnh if 1
+}
+else if (condition2){
+    // Code cho lệnh if 2
+}
+else{
+    // Code cho lệnh else
+}
+
+Nếu khối lệnh if (condition1) thỏa và chạy thì chương trình sẽ không biên dịch những lệnh if else phía dưới. Hay nói cách khác, Javascript sẽ thoát khỏi toàn bộ khối lệnh if khi có một lệnh if nào đó được chạy.
+
+Ví dụ
+var a = 12;
+ 
+if (a > 12){
+    alert('a > 12');
+}
+else if (a < 12){
+    alert('a < 12');
+}
+else{
+    alert('a = 12');
+}
+
+Kết quả sẽ chạy ở lệnh else cuối cùng tại vì các lệnh if bên trên không thỏa điều kiện. Bây giờ bạn thử đổi giá trị của a thành a = 10 thì câu lệnh thứ 2 else if sẽ được thực hiện.
+
+Với bài tập này bạn cũng có thể sử dụng hai khối lệnh if như sau:
+var a = 12;
+ 
+// Khối 1
+if (a > 12){
+    alert('a > 12');
+}
+ 
+// Khối 2
+if (a < 12){
+    alert('a < 12');
+}
+else{
+    alert('a = 12');
+}
+Tuy nhiên, về mặt tốc độ thì sẽ không tốt, vì Javascript sẽ biên dịch cho cả hai khối dù cho khối lệnh if ở khối 1 chạy.
+
+4. Lệnh if else lồng nhau trong javascript
+Cũng giống như các ngôn ngữ lập trình khác, ta có thể lồng các câu lệnh if lại với nhau, nghĩa là bên trong câu lệnh if sẽ chứa câu lệnh if khác.
+ví dụ:
+var a = 13;
+  
+// Nếu a > 12
+if (a > 12)
+{
+    // Khai báo biến b
+    var b = 20;
+      
+    // Nếu a bằng b
+    if (a == b)
+    {
+        alert(' a = b ');
+    }
+    else { // ngược lại a khác b
+        alert(' a != b ');
+    }
+}
+5. Hàm if trong HTML có không?
+Đây là câu hỏi mà có một bạn đã inbox mình, và mình xin trả lời là không có hàm if trong HTML nha các bạn. Thay vào đó, nếu bạn muốn xử lý cách hiển thị HTML thì có thể sử dụng lệnh if else, hoặc sử dụng ngôn ngữ phía server như PHP, ASP, JSP.
+
+Lời kết: Vậy là mình đã hướng dẫn xong cách sử dụng lệnh if else trong Javascript, đây là lệnh rất hay, dùng để rẻ chương trình thành nhiều nhánh khác nhau. Bài này mình dừng ở đây nhé, hẹn gặp lại các bạn ở bài tiếp theo.
